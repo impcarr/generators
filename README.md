@@ -1,1 +1,2 @@
-# generators
+# Generators
+This is a simple little script with associated wordbanks to generate random things on the fly with just a few button presses. A solid chunk of the generated material comes from other people's work, so please do not use this for commercial purposes.
