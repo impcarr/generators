@@ -1,26 +1,32 @@
-def person():
-    print("Not yet implemented")
 import random
 
-def location():
-    print("Not yet implemented")
+def book():
+    print()
+    print(random.choice(open("books.txt").read().splitlines()))
+
+def conversation():
+    #I know this can generate someone talking to themself. This is intended behavior.
+    first_conversant = random.choice(open("characters.txt").read().splitlines())
+    second_conversant = random.choice(open("characters.txt").read().splitlines())
+    first_mood = random.choice(open("moods.txt").read().splitlines())
+    second_mood = random.choice(open("moods.txt").read().splitlines())
+    print((f"\nYou see {first_conversant} and {second_conversant} having a conversation. {first_conversant} looks {first_mood} and {second_conversant} looks {second_mood}.")
+)
+
 
 def other():
-    x = input("Press 1 to generate the title of a book\n")
-    if x == '1':
-        print()
-        print(random.choice(open("books.txt").readlines()))
+    print("Not yet implemented, moron")
 
 
 
 
 def main():
     while True:
-        x = input('Press 1 to generate a person\'s name, 2 to generate a town or other location, or 3 to generate something else. \nType \'done\' to exit \n')
+        x = input('\nPress 1 to generate a book, 2 to generate a conversation, or 3 to generate something else. \nType \'done\' to exit \n')
         if x == '1':
-            person()
+            book()
         if x == '2':
-            location()
+            conversation()
         if x == '3':
             other()
         if x.lower() == 'done':
